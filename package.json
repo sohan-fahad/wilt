@@ -1,0 +1,24 @@
+{
+  "name": "wilt",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "pnpm -r build",
+    "build:core": "pnpm --filter @wilt/core build",
+    "build:cli": "pnpm --filter @wilt/cli build",
+    "publish:core": "pnpm --filter @wilt/core publish --no-git-checks",
+    "publish:cli": "pnpm --filter @wilt/cli publish --no-git-checks",
+    "check": "pnpm -r check",
+    "lint": "eslint packages --ext .ts",
+    "format": "prettier --write \"packages/**/*.ts\"",
+    "test": "pnpm -r test"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@typescript-eslint/eslint-plugin": "^8.59.3",
+    "@typescript-eslint/parser": "^8.59.3",
+    "eslint": "^10.3.0",
+    "prettier": "^3.8.3"
+  }
+}

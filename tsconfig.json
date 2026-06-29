@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "lib": [
+      "ESNext",
+      "DOM"
+    ],
+    "types": [
+      "reflect-metadata"
+    ],
+    "paths": {
+      "@ajke/core": ["./packages/core/src/index.ts"],
+      "@ajke/core/config": ["./packages/core/src/config.ts"],
+      "@ajke/core/middleware": ["./packages/core/src/middleware/index.ts"]
+    }
+  },
+  "include": [
+    "packages/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "packages/*/dist"
+  ]
+}

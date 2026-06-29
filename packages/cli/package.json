@@ -1,0 +1,37 @@
+{
+  "name": "@wilt/cli",
+  "version": "0.2.0",
+  "type": "module",
+  "description": "CLI for the Wilt framework \u2014 scaffold Cloudflare Workers projects",
+  "keywords": [
+    "cloudflare",
+    "workers",
+    "cli",
+    "scaffold",
+    "typescript"
+  ],
+  "license": "MIT",
+  "bin": {
+    "wilt": "./dist/bin/wilt.js"
+  },
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup --config tsup.config.ts",
+    "prebuild": "rimraf dist",
+    "check": "tsc --noEmit",
+    "wilt": "tsx bin/wilt.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^25.7.0",
+    "rimraf": "^6.1.3",
+    "tsup": "^8.5.1",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3"
+  }
+}

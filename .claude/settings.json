@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm check *)",
+      "Bash(npm show *)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(rm -rf /Users/sohanfahad/Documents/workspaces/cf-worker-workpace/cf-hono-starter/example/ajke-test/node_modules/.vite)",
+      "Bash(pnpm install *)",
+      "Bash(curl -sS -X POST http://localhost:4002/v1/auth/register -H 'Content-Type: application/json' -d '{ *)",
+      "Bash(curl -sv -X POST http://localhost:4002/v1/auth/register -H 'Content-Type: application/json' -d '{\"email\":\"you@example.com\",\"password\":\"secret12\",\"firstName\":\"Test\",\"lastName\":\"User\"}')",
+      "Bash(find /Users/sohanfahad/Documents/workspaces -type d -name \"ajke*\" 2>/dev/null | head -20)",
+      "Read(//Users/sohanfahad/Documents/workspaces/**)",
+      "Bash(pnpm vitest *)",
+      "Bash(pip3 show *)",
+      "Bash(brew install *)",
+      "Bash(git filter-repo *)",
+      "Bash(git remote *)",
+      "Bash(git push *)",
+      "Bash(npm link *)",
+      "Bash(ln -s /Users/sohanfahad/.nvm/versions/node/v22.17.1/lib/node_modules/wilt /Users/sohanfahad/Documents/workspaces/cf-worker-workpace/cf-hono-starter/example/ajke-test/node_modules/wilt)",
+      "Bash(pnpm test *)",
+      "Bash(xargs sed -i '' 's/z\\\\.string\\(\\)\\\\.uuid\\(\\)/z.uuid\\(\\)/g; s/z\\\\.string\\(\\)\\\\.email\\(\\)/z.email\\(\\)/g')",
+      "Bash(git mv *)",
+      "Bash(pnpm build *)",
+      "Bash(npm view *)",
+      "Bash(pnpm build:core)"
+    ]
+  }
+}

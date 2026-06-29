@@ -1,0 +1,63 @@
+{
+  "name": "@wilt/core",
+  "version": "0.2.0",
+  "type": "module",
+  "description": "NestJS-like framework core for Cloudflare Workers with Hono",
+  "keywords": [
+    "cloudflare",
+    "workers",
+    "hono",
+    "framework",
+    "nestjs",
+    "typescript"
+  ],
+  "license": "MIT",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./middleware": {
+      "types": "./dist/middleware/index.d.ts",
+      "import": "./dist/middleware/index.js",
+      "require": "./dist/middleware/index.cjs"
+    },
+    "./config": {
+      "types": "./dist/config.d.ts",
+      "import": "./dist/config.js",
+      "require": "./dist/config.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "peerDependencies": {
+    "hono": ">=4",
+    "reflect-metadata": ">=0.2",
+    "zod": ">=3"
+  },
+  "scripts": {
+    "build": "tsup --config tsup.config.ts",
+    "prebuild": "rimraf dist",
+    "check": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@types/node": "^25.7.0",
+    "hono": "^4.12.0",
+    "reflect-metadata": "^0.2.2",
+    "rimraf": "^6.1.3",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.0",
+    "zod": "^4.0.0"
+  }
+}
