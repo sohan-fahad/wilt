@@ -1,0 +1,3 @@
+# This file makes pnpm treat this project as its own workspace root,
+# preventing it from resolving packages against a parent workspace.
+packages: []

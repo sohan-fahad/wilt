@@ -24,10 +24,10 @@ importers:
         specifier: ^3.8.3
         version: 3.8.3
 
-  example/ajke-test:
+  example/01-auth-app:
     dependencies:
-      '@ajke/core':
-        specifier: file:../../packages/core
+      '@wilt/core':
+        specifier: workspace:*
         version: link:../../packages/core
       drizzle-orm:
         specifier: ^0.45.0
@@ -35,9 +35,6 @@ importers:
       hono:
         specifier: ^4.12.0
         version: 4.12.18
-      jose:
-        specifier: ^6.2.3
-        version: 6.2.3
       reflect-metadata:
         specifier: ^0.2.2
         version: 0.2.2
@@ -48,9 +45,6 @@ importers:
         specifier: ^4.0.0
         version: 4.4.3
     devDependencies:
-      '@ajke/cli':
-        specifier: file:../../packages/cli
-        version: link:../../packages/cli
       '@cloudflare/vite-plugin':
         specifier: ^1.36.0
         version: 1.37.1(vite@6.4.2(@types/node@22.19.19)(tsx@4.21.0))(workerd@1.20260515.1)(wrangler@4.92.0(@cloudflare/workers-types@4.20260517.1))
@@ -63,6 +57,9 @@ importers:
       '@types/node':
         specifier: ^22.0.0
         version: 22.19.19
+      '@wilt/cli':
+        specifier: workspace:*
+        version: link:../../packages/cli
       drizzle-kit:
         specifier: ^0.31.0
         version: 0.31.10
@@ -1626,9 +1623,6 @@ packages:
 
   isexe@2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
-
-  jose@6.2.3:
-    resolution: {integrity: sha512-YYVDInQKFJfR/xa3ojUTl8c2KoTwiL1R5Wg9YCydwH0x0B9grbzlg5HC7mMjCtUJjbQ/YnGEZIhI5tCgfTb4Hw==}
 
   joycon@3.1.1:
     resolution: {integrity: sha512-34wB/Y7MW7bzjKRjUKTa46I2Z7eV62Rkhva+KkopW7Qvv/OSWBqvkSY7vusOPrNuZcUG3tApvdVgNB8POj3SPw==}
@@ -3229,8 +3223,6 @@ snapshots:
       is-extglob: 2.1.1
 
   isexe@2.0.0: {}
-
-  jose@6.2.3: {}
 
   joycon@3.1.1: {}
 

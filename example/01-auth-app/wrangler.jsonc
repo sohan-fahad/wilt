@@ -1,0 +1,22 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "01-auth-app",
+  "main": "./src/index.ts",
+  "compatibility_date": "2025-06-17",
+  "compatibility_flags": ["nodejs_compat"],
+  "vars": {
+    "MODE": "development",
+    "JWT_SECRET": "change-me-in-production-use-wrangler-secret"
+  },
+  "observability": { "enabled": true },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "REPLACE_WITH_YOUR_D1_NAME",
+      "database_id": "00000000-0000-0000-0000-000000000001",
+      "migrations_dir": "migrations",
+      "preview_database_id": "00000000-0000-0000-0000-000000000002"
+    }
+  ],
+  "dev": { "port": 4001 }
+}
